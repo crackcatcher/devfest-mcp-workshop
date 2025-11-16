@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chrome DevTools MCP Server insights and automation recipes from DevFest Workshop">
+  <title>DevTools MCP · DevFest Workshop Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo">DevFest<span>Workshop</span></div>
+    <nav class="site-nav" id="site-nav">
+      <a href="index.html">Home</a>
+      <a href="gdg-devfest.html">GDG & DevFest</a>
+      <a href="devtools-mcp.html" class="active">DevTools MCP</a>
+      <a href="about-zane.html">About zane</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Technical deep dive</p>
+      <h1>Chrome DevTools MCP Server playbook</h1>
+      <p class="lede">Model Context Protocol turns DevTools actions into composable skills. These are the building blocks we covered during the DevFest workshop.</p>
+    </section>
+
+    <section class="grid grid-3">
+      <article class="card">
+        <h3>Observable state</h3>
+        <p>MCP streams console output, network timelines, and screenshot diffs back to your orchestrator, so every action is traceable.</p>
+      </article>
+      <article class="card">
+        <h3>Deterministic recipes</h3>
+        <p>We defined JSON playbooks that open DevTools panels, run audits, and capture artifacts using a single agent directive.</p>
+      </article>
+      <article class="card">
+        <h3>Feedback loops</h3>
+        <p>DevTools MCP enables ask-execute-validate cycles in seconds, ideal for performance tuning and regression hunting.</p>
+      </article>
+    </section>
+
+    <section class="split reverse">
+      <div class="panel glass">
+        <h3>MCP automation loop</h3>
+        <ol class="numbered-list">
+          <li>Goal set: describe the debugging objective (ex. find layout shift).</li>
+          <li>Action plan: MCP server translates the request into DevTools commands.</li>
+          <li>Observation: captured traces and screenshots return instantly.</li>
+          <li>Adjustment: refine prompts, re-run focused checks, ship fix.</li>
+        </ol>
+      </div>
+      <div>
+        <p class="eyebrow">Workshop demo</p>
+        <h2>Highlights from the live session</h2>
+        <p>We automated Lighthouse runs per route, throttled CPU/GPU via commands, and compared snapshots to ensure UI resilience.</p>
+        <p>Participants extended the sample server to include custom DOM probes, showing how MCP can reflect project-specific KPIs.</p>
+      </div>
+    </section>
+
+    <section class="grid grid-2">
+      <article class="card">
+        <h3>Implementation tips</h3>
+        <ul class="bullet-list">
+          <li>Keep prompt templates versioned alongside your DevTools config.</li>
+          <li>Streamline artifact storage—naming conventions for traces matter.</li>
+          <li>Pair MCP commands with CI hooks so regressions surface automatically.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Next experiments</h3>
+        <ul class="bullet-list">
+          <li>Blend MCP with performance budgets to block merges when thresholds slip.</li>
+          <li>Extend the server with custom endpoints for CMS previews.</li>
+          <li>Teach MCP to annotate DOM diffs for designers.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="callout">
+      <h2>Want the sample automation scripts?</h2>
+      <p>Ping me and I will share the MCP command deck plus the live demo repository.</p>
+      <a class="btn primary" href="mailto:hi@zane.cn">Request resources</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Crafted by zane · Programmer & runner · <a href="mailto:hi@zane.cn">hi@zane.cn</a></p>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+
+</html>
